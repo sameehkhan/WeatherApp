@@ -1,11 +1,23 @@
 import React, { Component } from "react";
-import TextField from "../node_modules/@material-ui/core/TextField";
-
+import CardComponent from "../src/Components/CardComponent";
+import TextInput from "../src/Components/TextInput";
 class App extends Component {
   render() {
     return (
-      <div style={{ display: "flex" }}>
-        <TextField />
+      <div style={{ maxheight: "100vh" }}>
+        <TextInput />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "space=between",
+            flexDirection: "row"
+          }}
+        >
+          <CardComponent />
+          <CardComponent />
+          <CardComponent />
+        </div>
       </div>
     );
   }
