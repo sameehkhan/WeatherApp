@@ -1,14 +1,12 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import TextField from "@material-ui/core/TextField";
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <TextField />
-      </div>
-    );
-  }
-}
+
+
+const App = () => (
+  <div>
+    <TextField />
+  </div>
+);
 
 export default App;
