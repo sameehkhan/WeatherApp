@@ -2,9 +2,13 @@ import React from "react";
 import Card from "../../node_modules/@material-ui/core/Card";
 import Typography from "../../node_modules/@material-ui/core/Typography";
 import CardContent from "../../node_modules/@material-ui/core/CardContent";
+import Key from "../../config/keys";
+
+const API = 'api.openweathermap.org/data/2.5/weather?q=Sacramento';
+
 
 class CardComponent extends React.Component {
-  
+
   render() {
 
     const styles = {
@@ -32,7 +36,7 @@ class CardComponent extends React.Component {
         <CardContent>
           <Typography gutterBottom variant="headline" component="h2">
             Lunas
-        </Typography>
+          </Typography>
         </CardContent>
       </Card>
     </div>
