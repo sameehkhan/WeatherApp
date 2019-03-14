@@ -2,8 +2,7 @@ import React from "react";
 import Card from "../../node_modules/@material-ui/core/Card";
 import Typography from "../../node_modules/@material-ui/core/Typography";
 import CardContent from "../../node_modules/@material-ui/core/CardContent";
-
-const API = `https://api.openweathermap.org/data/2.5/weather?q=Sacramento&appid=${Key}&units=imperial`;
+const dotenv = require('dotenv');
 
 class CardComponent extends React.Component {
   constructor(props) {
@@ -15,9 +14,15 @@ class CardComponent extends React.Component {
   }
 
   componentDidMount() {
-    fetch(API)
+    const key = process.env.KEY;
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=Sacramento&appid=${key}&units=imperial`)
       .then(response => response.json())
-      .then(data => this.setState({ data }));
+      .then(data => {
+        this.setState({ data: data.main.temp });
+        console.log(this.state.data);
+        }
+        );
   }
 
   render() {
@@ -46,7 +51,7 @@ class CardComponent extends React.Component {
       <Card>
         <CardContent>
           <Typography gutterBottom variant="headline" component="h2">
-            Lunas
+            {this.state.data}
           </Typography>
         </CardContent>
       </Card>
