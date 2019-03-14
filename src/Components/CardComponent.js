@@ -2,11 +2,23 @@ import React from "react";
 import Card from "../../node_modules/@material-ui/core/Card";
 import Typography from "../../node_modules/@material-ui/core/Typography";
 import CardContent from "../../node_modules/@material-ui/core/CardContent";
-import Key from "../../config/keys";
-const API = `https://api.openweathermap.org/data/2.5/weather?q=San Francisco&appid=${Key}&units=imperial`
+
+const API = `https://api.openweathermap.org/data/2.5/weather?q=Sacramento&appid=${Key}&units=imperial`;
 
 class CardComponent extends React.Component {
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      data: null,
+    };
+  }
+
+  componentDidMount() {
+    fetch(API)
+      .then(response => response.json())
+      .then(data => this.setState({ data }));
+  }
 
   render() {
 
