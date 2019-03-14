@@ -14,10 +14,8 @@ code {
 }
 
 .cards{
-  
-display: flex;
-justify-content: center;
-align-items: space-between;
-flex-direction: row;
-
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  flex-direction: row;
 }
