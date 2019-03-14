@@ -5,7 +5,7 @@ import TextInput from "./TextInput";
 const App = () => (
   <div style={{ maxheight: "100vh" }}>
     <TextInput />
-    <div
+    <div className='cards'
       style={{
         display: "flex",
         justifyContent: "center",
