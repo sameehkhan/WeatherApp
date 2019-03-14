@@ -3,11 +3,10 @@ import Card from "../../node_modules/@material-ui/core/Card";
 import Typography from "../../node_modules/@material-ui/core/Typography";
 import CardContent from "../../node_modules/@material-ui/core/CardContent";
 import Key from "../../config/keys";
-
-const API = 'api.openweathermap.org/data/2.5/weather?q=Sacramento';
-
+const API = `https://api.openweathermap.org/data/2.5/weather?q=San Francisco&appid=${Key}&units=imperial`
 
 class CardComponent extends React.Component {
+
 
   render() {
 
