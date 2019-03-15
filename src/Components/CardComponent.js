@@ -14,8 +14,6 @@ class CardComponent extends React.Component {
   }
 
   componentDidMount() {
-    const key = process.env.KEY;
-
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=Sacramento&appid=${key}&units=imperial`)
       .then(response => response.json())
       .then(data => {
